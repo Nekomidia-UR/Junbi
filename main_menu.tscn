@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://crev2inf1u6xe"]
+
+[ext_resource type="Script" uid="uid://nq3fu3dxxpss" path="res://ui_root.gd" id="1_06t4h"]
+
+[node name="UIRoot" type="PanelContainer" unique_id=601414987]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="UICenter" type="CenterContainer" parent="." unique_id=1743314511]
+layout_mode = 2
+
+[node name="MainSplit" type="VBoxContainer" parent="UICenter" unique_id=999758656]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="UICenter/MainSplit" unique_id=1853352425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Project Junbi"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SubtitleLabel" type="Label" parent="UICenter/MainSplit" unique_id=824541758]
+layout_mode = 2
+text = "Dev Build 0"
+horizontal_alignment = 1
+
+[node name="ButtonSplit" type="VBoxContainer" parent="UICenter/MainSplit" unique_id=1278635953]
+layout_mode = 2
+
+[node name="RunButton" type="Button" parent="UICenter/MainSplit/ButtonSplit" unique_id=1542960164]
+layout_mode = 2
+disabled = true
+text = "Run"
+
+[node name="QuitButton" type="Button" parent="UICenter/MainSplit/ButtonSplit" unique_id=1673716005]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="UICenter/MainSplit/ButtonSplit/QuitButton" to="." method="_on_quit_button_pressed"]
