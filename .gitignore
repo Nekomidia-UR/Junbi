@@ -22,3 +22,6 @@ mono_crash.*.json
 .idea
 build
 jvm
+
+# Don't push godotty binaries 
+/addons/godotty
