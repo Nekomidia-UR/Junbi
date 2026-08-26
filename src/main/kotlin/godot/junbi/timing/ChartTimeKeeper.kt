@@ -11,7 +11,7 @@ class ChartTimeKeeper(
     private var isPaused = false
 
     fun isNoteReady(note: Note): Boolean =
-        startTime + pauseTime + note.appearTime < Time.getTicksMsec()
+        startTime + pauseTime + note.appearTime <= Time.getTicksMsec()
 
     fun togglePause(paused: Boolean) {
         isPaused = paused
