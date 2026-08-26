@@ -1,0 +1,19 @@
+# Necchart V1
+- Binary format
+- Contained data:
+- - Header:
+- - - Magic: String = "NEKO"
+- - - Version: Byte = 0
+- - - Chart Type: Byte = 0
+- - - Button Count: Byte (usually 4, must be > 0)
+- - - BPM: Int
+- - - Song Name Length: Int (length of song name string)
+- - - Song Name: String
+- - - Song Artist Name Length: Int
+- - - Song Artist Name: String
+- Song Content:
+- - Button Count * (Note Array Length: Int + Note Array)
+- - Note Content:
+- - - Timing: Long (milliseconds, expected to have the smallest number in the first note)
+- - - Is Hold: Boolean
+- - - Hold Duration: Long (milliseconds)
