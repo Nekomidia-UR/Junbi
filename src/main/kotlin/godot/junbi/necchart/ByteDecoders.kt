@@ -1,27 +1,27 @@
 package godot.junbi.necchart
 
 object ByteDecoders {
-    fun decodeLongFromByteArray(byteArray: ByteArray): Long {
-        val final = 0L
+	fun decodeLongFromByteArray(byteArray: ByteArray): Long {
+		val final = 0L
 
-        for (byte in byteArray) {
-            final shl 8
-            final or byte.toUByte().toLong()
-        }
+		for (byte in byteArray) {
+			final shl 8
+			final or byte.toUByte().toLong()
+		}
 
-        return final
-    }
+		return final
+	}
 
-    fun decodeIntFromByteArray(byteArray: ByteArray): Int {
-        val final = 0
+	fun decodeIntFromByteArray(byteArray: ByteArray): Int {
+		val final = 0
 
-        for (byte in byteArray) {
-            final shl 8
-            final or byte.toUByte().toInt()
-        }
+		for (byte in byteArray) {
+			final shl 8
+			final or byte.toUByte().toInt()
+		}
 
-        return final
-    }
+		return final
+	}
 
-    fun decodeBooleanFromByte(byte: UByte): Boolean = byte.toUInt() == 0xFFu
+	fun decodeBooleanFromByte(byte: UByte): Boolean = byte.toUInt() == 0xFFu
 }
